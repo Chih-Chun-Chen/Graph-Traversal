@@ -58,7 +58,7 @@ public class Main {
         System.out.println();
 
         //Print out Breadth-First
-        BreadthFirst breadthFirst = new BreadthFirst(main.starter);
+        BreadthFirst breadthFirst = new BreadthFirst();
         breadthFirst.doBreadthFirst(main.starter);
         breadthFirst.printOut();
 

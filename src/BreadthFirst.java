@@ -9,25 +9,25 @@ public class BreadthFirst {
     Queue<Node> queue;
     String result = "";
 
-    BreadthFirst(Node firstNode) {
+    BreadthFirst() {
         list = new ArrayList<>();
-        list.add(firstNode);
         queue = new LinkedList<>();
-        queue.add(firstNode);
-        result += firstNode.name;
     }
 
     public void doBreadthFirst(Node a) {
+        list.add(a);
+        queue.add(a);
+        result += a.name;
         while (!queue.isEmpty()) {
-            for (Node element : a.neighbors) {
+            Node node = queue.peek();
+            for (Node element : node.neighbors) {
                 if (!list.contains(element)) {
                     list.add(element);
                     queue.add(element);
                     result += element.name;
                 }
             }
-            Node firstElement = queue.remove();
-            doBreadthFirst(firstElement);
+            queue.remove();
         }
     }
 
