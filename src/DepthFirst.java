@@ -25,7 +25,7 @@ public class DepthFirst {
     /**
      * To print out Depth-First elements
      */
-    public void printList() {
+    public void printOut() {
         String result = "";
         for (Node each : list) {
             result += each.name;

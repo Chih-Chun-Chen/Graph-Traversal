@@ -53,11 +53,14 @@ public class Main {
         //Print out Depth-First
         DepthFirst depthFirst = new DepthFirst(main.starter);
         depthFirst.doDepthFirst(main.starter);
-        depthFirst.printList();
+        depthFirst.printOut();
 
         System.out.println();
-        //Print out Breadth-First
 
+        //Print out Breadth-First
+        BreadthFirst breadthFirst = new BreadthFirst(main.starter);
+        breadthFirst.doBreadthFirst(main.starter);
+        breadthFirst.printOut();
 
     }
 }
