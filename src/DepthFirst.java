@@ -28,7 +28,7 @@ public class DepthFirst {
     public void printOut() {
         String result = "";
         for (Node each : list) {
-            result += each.name;
+            result += each.name + " ";
         }
         System.out.println("Depth-First Search:");
         System.out.println(result);

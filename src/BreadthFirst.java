@@ -17,14 +17,14 @@ public class BreadthFirst {
     public void doBreadthFirst(Node a) {
         list.add(a);
         queue.add(a);
-        result += a.name;
+        result += a.name + " ";
         while (!queue.isEmpty()) {
             Node node = queue.peek();
             for (Node element : node.neighbors) {
                 if (!list.contains(element)) {
                     list.add(element);
                     queue.add(element);
-                    result += element.name;
+                    result += element.name + " ";
                 }
             }
             queue.remove();
